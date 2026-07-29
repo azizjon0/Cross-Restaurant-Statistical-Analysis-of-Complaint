@@ -1,30 +1,35 @@
 # Dataset
 
-This dataset was created from the Yelp Open Dataset.
+This dataset was created from the **Yelp Open Dataset**.
 
-To reduce selection bias, four French restaurants were randomly selected from a pool of 121 French restaurants available in the dataset. For each restaurant, 200 reviews were randomly sampled, resulting in a balanced dataset of 800 customer reviews.
+To reduce selection bias, **four French restaurants** were randomly selected from a pool of **121 French restaurants** available in the dataset. For each restaurant, **200 reviews** were randomly sampled, resulting in a balanced dataset of **800 customer reviews**.
 
-The reviews were processed using my Hybrid ABSA System:
+The reviews were annotated using my **Hybrid ABSA System**:
 
 https://github.com/azizjon0/Hybrid-ABSA-System
 
 The annotation pipeline combines two approaches:
 
-- **SetFit ABSA** automatically labels high-confidence samples.
-- **LLM (via API)** is used only for low-confidence or ambiguous predictions.
+- **SetFit ABSA** automatically labels high-confidence predictions.
+- **An LLM (via API)** is invoked only for low-confidence or ambiguous predictions.
+- The final dataset is produced by the complete hybrid pipeline.
 
-The overall performance of the annotation system is:
+## Annotation Pipeline Performance
+
+The hybrid pipeline was evaluated against manually verified labels and achieved the following performance:
 
 | Metric | Score |
 |---------|------:|
-| Accuracy | 0.90 |
-| Recall | 0.89 |
-| F1-score | 0.88 |
+| Accuracy | **0.9569** |
+| Macro F1-score | **0.9425** |
+| Weighted F1-score | **0.9558** |
+
+Compared with the baseline SetFit model, the hybrid pipeline improved overall accuracy from **87.63%** to **95.69%**, an increase of **8.06 percentage points**.
 
 ## Important Note
 
 The purpose of this dataset is to compare a small sample of restaurants.
 
-The findings presented in this repository **should not be interpreted as representative of all French restaurants**. Only four restaurants were randomly selected, and therefore the statistical conclusions apply only to this sample.
+The findings presented in this repository **should not be interpreted as representative of all French restaurants**. Only four restaurants were randomly selected; therefore, the statistical conclusions apply **only to this sample**.
 
-The project investigates whether these randomly selected restaurants exhibit similar customer complaint patterns, rather than making general claims about the entire restaurant industry.
+This project investigates whether randomly selected restaurants exhibit similar customer complaint patterns rather than making general claims about the entire French restaurant industry.
