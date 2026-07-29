@@ -17,7 +17,7 @@ The project consists of three main stages:
 The figure below projects restaurants into a two-dimensional space based on their complaint profiles. Restaurants positioned closer together exhibit more similar distributions of customer complaints.
 
 *(Figure 1)*
-![Preview](assets/imagine1.png)
+![Cross-Restaurant-Statistical-Analysis-of-Complaint](assets/imagine1.png)
 
 ---
 
