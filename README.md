@@ -15,7 +15,7 @@ A statistical analysis of customer reviews from four restaurants using Aspect-Ba
 - **Statistical tests used:** [e.g. Chi-square test of independence for category-by-restaurant distributions; Mann-Whitney U / Kruskal-Wallis for sentiment score comparisons] — report test statistic and p-value for the headline result(s).
 - **Business implication:** [What would a multi-location restaurant group actually do with this? e.g. "fix X chain-wide, audit Y per-location."]
 
-![Category comparison chart](assets/category_comparison.png)
+![Category comparison chart](assets/imagine1.png)
 *Replace with your actual chart from `assets/` — a positive-rate-by-category-by-restaurant grouped bar chart works well here.*
 
 ---
@@ -63,7 +63,6 @@ Customer reviews from four French restaurants, ~200 randomly sampled reviews per
 ## Limitations
 
 - Sample size (~200 reviews/restaurant) limits statistical power for some per-category comparisons, particularly where a category has few mentions at a given restaurant.
-- [Add any other caveats specific to your test choices, e.g. multiple-comparisons correction if you ran many category-level tests.]
 
 ## Technologies
 
@@ -71,7 +70,7 @@ Python · Pandas · NumPy · Matplotlib · Seaborn · SciPy · Statsmodels · Op
 
 ## Related Work
 
-Built on the [Hybrid BERT + LLM ABSA Pipeline](LINK_TO_YOUR_ABSA_REPO) used to generate the underlying aspect-sentiment predictions for this analysis.
+Built on the [Hybrid GPT + LLM ABSA Pipeline](https://github.com/azizjon0/Hybrid-ABSA-System) used to generate the underlying aspect-sentiment predictions for this analysis.
 
 ## Research Goal
 
