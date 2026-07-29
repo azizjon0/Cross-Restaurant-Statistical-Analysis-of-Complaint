@@ -27,7 +27,7 @@ The next visualization compares the proportion of complaint categories across al
 Although each restaurant has its own characteristics, the overall complaint distributions are remarkably similar, suggesting that many operational issues are shared across businesses.
 
 *(Figure 2)*
-![Preview](../assets/imagine1.png)
+![Preview](../assets/imagine2.png)
 
 ---
 
@@ -38,4 +38,4 @@ The final visualization shows the proportion of positive, neutral, and negative 
 This makes it possible to identify which categories are consistently appreciated and which represent common sources of dissatisfaction.
 
 *(Figure 3)*
-![Preview](../assets/imagine1.png)
+![Preview](../assets/imagine3.png)
