@@ -17,23 +17,91 @@ A statistical study of customer feedback across four French restaurants using As
 
 ---
 
-## Key Findings
+# Statistical Results
 
-- **Shared complaint patterns**
-  - Despite operating independently, all four restaurants exhibited similar high-level complaint themes. Food quality—particularly meat dishes—appeared as a recurring source of negative feedback across every restaurant, suggesting that some operational challenges are common rather than location-specific.
+To determine whether customer complaint patterns differ across restaurants, several statistical analyses were performed.
 
-- **Restaurant-specific characteristics**
-  - Each restaurant also developed a distinct customer experience profile. Positive reviews frequently highlighted unique features such as signature dishes (e.g., *Smoked Goat Cheese*), complimentary bread service, or special promotions (e.g., Golden Hour offers). Likewise, each restaurant showed unique operational weaknesses, including uncomfortable seating, reservation management issues, or complaints directed at management.
+## 1. Complaint Category Distribution
 
-- **Complaint intensity**
-  - Although the types of complaints overlapped, their frequency differed substantially between restaurants. The average number of negative aspect mentions per review ranged from **2.19** to **4.05**, indicating that some restaurants generated nearly twice as many customer complaints per review as others.
+A **Chi-square Test of Independence** was applied to compare the distribution of negative aspect categories across the four restaurants.
 
-| Restaurant | Negative aspect mentions per review |
+### Results
+
+| Statistic | Value |
+|-----------|------:|
+| Chi-square (χ²) | 35.99 |
+| Degrees of freedom | 36 |
+| p-value | 0.469 |
+| Cramer's V | 0.118 |
+
+The assumptions of the Chi-square test were verified before hypothesis testing:
+
+- Minimum expected frequency = **5.68**
+- Cells with expected frequency < 5 = **0%**
+
+Since all expected frequencies exceeded the recommended threshold, the Chi-square approximation was considered valid.
+
+### Interpretation
+
+The test found **no statistically significant association** between restaurant and complaint category distribution (**p = 0.469**).
+
+This indicates that customers tend to complain about the **same types of issues**, regardless of which restaurant they visited.
+
+Furthermore, the effect size was small (**Cramer's V = 0.118**), suggesting only a weak relationship between restaurant identity and complaint profile.
+
+---
+
+## Typical Complaint Profile
+
+After normalizing complaint frequencies within each restaurant, the average complaint profile was computed.
+
+| Complaint Category | Mean Share |
+|-------------------|-----------:|
+| Specific Dish | 13.7% |
+| Food Quality | 13.2% |
+| Service | 12.7% |
+| Restaurant General | 12.1% |
+| Staff Behavior | 10.9% |
+| Price Value | 5.8% |
+| Drinks | 5.6% |
+| Seating Comfort | 5.4% |
+| Menu Variety | 5.4% |
+| Atmosphere | 4.3% |
+| Other Operational | 3.9% |
+| Waiting Time | 3.7% |
+| Desserts | 3.2% |
+
+These results demonstrate that customer complaints are concentrated around a small set of recurring operational issues, particularly food quality, specific dishes, and service.
+
+---
+
+## Complaint Intensity
+
+Although restaurants shared similar complaint categories, they differed in the **amount of negative feedback** received.
+
+| Restaurant | Negative Aspect Mentions per Review |
 |------------|------------------------------------:|
 | Lilette | 2.19 |
 | Pacific Crepes | 2.64 |
 | Meauxbar | 3.08 |
 | Piquant | 4.05 |
+
+This suggests that while customers complain about similar issues across restaurants, some restaurants generate substantially more complaints per review than others.
+
+---
+
+## Evidence Supporting the Research Question
+
+The statistical evidence suggests that customer complaint patterns are **largely universal rather than restaurant-specific**.
+
+This conclusion is supported by:
+
+- **Non-significant Chi-square test** (χ² = 35.99, p = 0.469), indicating no significant differences in complaint category distributions.
+- **Small effect size** (Cramer's V = 0.118), showing only a weak association between restaurant and complaint profile.
+- **Highly consistent normalized complaint profiles**, where the same categories (Specific Dish, Food Quality, Service, Restaurant General, and Staff Behavior) dominate across all restaurants.
+- **Differences in complaint intensity**, indicating that restaurants differ more in how often customers complain than in what they complain about.
+
+Overall, the findings suggest that improving food quality, individual dishes, and service is likely to benefit restaurants regardless of their individual characteristics.
 
 # Research Pipeline
 
