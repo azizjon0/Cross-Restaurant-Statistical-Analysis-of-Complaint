@@ -11,7 +11,7 @@ A statistical study of customer feedback across four French restaurants using As
 
 - Random sample of **800 customer reviews** (200 per restaurant)
 - **4 French restaurants** randomly selected from the Yelp Open Dataset
-- **4,000+ aspect-level opinions** extracted using a hybrid ABSA pipeline
+- **15,000+ aspect-level opinions** extracted using a hybrid ABSA pipeline
 - **200+ raw aspect terms** grouped into **16 standardized business categories**
 - Statistical comparison of complaint and satisfaction patterns across restaurants
 
@@ -19,13 +19,24 @@ A statistical study of customer feedback across four French restaurants using As
 
 ## Key Findings
 
-> Replace this section with the final statistical results from Notebook 02 before publishing.
+- **Shared complaint patterns**
+  - Despite operating independently, all four restaurants exhibited similar high-level complaint themes. Food quality—particularly meat dishes—appeared as a recurring source of negative feedback across every restaurant, suggesting that some operational challenges are common rather than location-specific.
 
-- **Universal patterns**
-  - [Example: Waiting Time and Price Value showed similar complaint patterns across all restaurants.]
+- **Restaurant-specific characteristics**
+  - Each restaurant also developed a distinct customer experience profile. Positive reviews frequently highlighted unique features such as signature dishes (e.g., *Smoked Goat Cheese*), complimentary bread service, or special promotions (e.g., Golden Hour offers). Likewise, each restaurant showed unique operational weaknesses, including uncomfortable seating, reservation management issues, or complaints directed at management.
 
-- **Restaurant-specific patterns**
-  - [Example: Staff Behavior and Service Quality differed significantly between restaurants.]
+- **Complaint intensity**
+  - Although the types of complaints overlapped, their frequency differed substantially between restaurants. The average number of negative aspect mentions per review ranged from **2.19** to **4.05**, indicating that some restaurants generated nearly twice as many customer complaints per review as others.
+
+| Restaurant | Negative aspect mentions per review |
+|------------|------------------------------------:|
+| Lilette | 2.19 |
+| Pacific Crepes | 2.64 |
+| Meauxbar | 3.08 |
+| Piquant | 4.05 |
+
+- **Business implication**
+  - The results suggest that restaurant groups should address universal operational issues (such as recurring food-quality complaints) through chain-wide improvements, while restaurant-specific issues should be managed locally to preserve each location's strengths and resolve its unique weaknesses.
 
 - **Statistical evidence**
   - Chi-square Test
@@ -35,9 +46,9 @@ A statistical study of customer feedback across four French restaurants using As
 - **Business implication**
   - Chain-wide operational improvements should focus on universal issues, while restaurant-specific categories require location-level interventions.
 
-![Category comparison](assets/imagine1.png)
+![Category comparison](assets/imagine2.png)
 
-*Example visualization comparing positive sentiment rates across restaurants.*
+*Example visualization comparing positive and negative sentiments rate across restaurants.*
 
 ---
 
@@ -46,7 +57,7 @@ A statistical study of customer feedback across four French restaurants using As
 The complete analytical workflow consists of five stages:
 
 1. Extract aspect-level opinions from customer reviews using a hybrid ABSA system.
-2. Normalize 200+ extracted aspects into 16 standardized business categories.
+2. Normalize 2000+ extracted aspects into 16 standardized business categories.
 3. Perform exploratory data analysis of aspect frequency and sentiment.
 4. Apply statistical tests to compare restaurants.
 5. Identify universal versus restaurant-specific customer experience patterns.
