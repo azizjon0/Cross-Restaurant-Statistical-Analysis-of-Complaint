@@ -1,81 +1,203 @@
 # Cross-Restaurant Statistical Analysis of Complaint Patterns
 
-A statistical analysis of customer reviews from four restaurants using Aspect-Based Sentiment Analysis (ABSA), investigating whether complaint patterns are universal across restaurants or business-specific.
+A statistical study of customer feedback across four French restaurants using Aspect-Based Sentiment Analysis (ABSA) to determine whether customer complaint patterns are universal across restaurants or specific to individual businesses.
 
-**TL;DR:** [ONE-LINE HEADLINE FINDING — e.g. "Waiting Time and Price Value complaints were consistent across all four restaurants (p < 0.05), while Staff Behavior sentiment varied significantly by location — suggesting service culture, not food quality, drives restaurant-specific reputation."]
+> **Research Question:**  
+> Do restaurants share common customer complaint patterns, or does each restaurant develop its own unique profile of strengths and weaknesses?
+
+---
+
+## Project Highlights
+
+- Random sample of **800 customer reviews** (200 per restaurant)
+- **4 French restaurants** randomly selected from the Yelp Open Dataset
+- **4,000+ aspect-level opinions** extracted using a hybrid ABSA pipeline
+- **200+ raw aspect terms** grouped into **16 standardized business categories**
+- Statistical comparison of complaint and satisfaction patterns across restaurants
 
 ---
 
 ## Key Findings
 
-> Fill this in with your actual notebook 02 results before publishing — this section is what recruiters read first.
+> Replace this section with the final statistical results from Notebook 02 before publishing.
 
-- **Universal patterns:** [Which categories showed similar sentiment/frequency across all 4 restaurants?]
-- **Restaurant-specific patterns:** [Which categories differed significantly, and which restaurant(s) drove the difference?]
-- **Statistical tests used:** [e.g. Chi-square test of independence for category-by-restaurant distributions; Mann-Whitney U / Kruskal-Wallis for sentiment score comparisons] — report test statistic and p-value for the headline result(s).
-- **Business implication:** [What would a multi-location restaurant group actually do with this? e.g. "fix X chain-wide, audit Y per-location."]
+- **Universal patterns**
+  - [Example: Waiting Time and Price Value showed similar complaint patterns across all restaurants.]
 
-![Category comparison chart](assets/imagine1.png)
-*Replace with your actual chart from `assets/` — a positive-rate-by-category-by-restaurant grouped bar chart works well here.*
+- **Restaurant-specific patterns**
+  - [Example: Staff Behavior and Service Quality differed significantly between restaurants.]
+
+- **Statistical evidence**
+  - Chi-square Test
+  - Kruskal-Wallis Test
+  - Effect sizes where appropriate
+
+- **Business implication**
+  - Chain-wide operational improvements should focus on universal issues, while restaurant-specific categories require location-level interventions.
+
+![Category comparison](assets/imagine1.png)
+
+*Example visualization comparing positive sentiment rates across restaurants.*
 
 ---
 
-## Project Overview
+# Research Pipeline
 
-This repository contains an end-to-end analytical pipeline:
+The complete analytical workflow consists of five stages:
 
-1. Extract aspect-level opinions from customer reviews using a hybrid BERT + LLM ABSA pipeline.
-2. Categorize 200+ unique raw aspects into 16 standardized business categories.
-3. Perform exploratory data analysis on aspect frequency and sentiment distribution.
-4. Compare restaurants statistically to test for significant differences.
-5. Identify which complaint patterns are common across businesses versus restaurant-specific.
+1. Extract aspect-level opinions from customer reviews using a hybrid ABSA system.
+2. Normalize 200+ extracted aspects into 16 standardized business categories.
+3. Perform exploratory data analysis of aspect frequency and sentiment.
+4. Apply statistical tests to compare restaurants.
+5. Identify universal versus restaurant-specific customer experience patterns.
 
-## Repository Structure
+---
 
-```
+# Repository Structure
+
+```text
 Cross-Restaurant-Statistical-Analysis-of-Complaint/
+│
+├── Dataset/
 │
 ├── Notebooks/
 │   ├── 00_Aspect_Categorization.ipynb
 │   ├── 01_Exploratory_Data_Analysis.ipynb
-│   └── 02_Cross-restaurant-statistical-analysis-of-complaint.ipynb
+│   └── 02_Cross_Restaurant_Statistical_Analysis.ipynb
 │
-├── Dataset/
 ├── assets/
+│
 └── README.md
 ```
 
-## Notebooks
+---
 
-### 00 — Aspect Categorization
-After processing reviews through the hybrid ABSA pipeline, 200+ unique aspect terms were extracted. An LLM grouped these into 16 standardized categories, including Food Quality, Service, Atmosphere, Drinks, Desserts, Staff Behavior, Waiting Time, Reservation, Price Value, and Cleanliness.
+# Notebook Overview
 
-### 01 — Exploratory Data Analysis
-Review statistics, aspect frequency, sentiment distribution, category popularity, and positive rate by category, providing a baseline view of the data before formal testing.
+## 00 — Aspect Categorization
 
-### 02 — Cross-Restaurant Statistical Analysis
-The main research notebook: comparison of aspect distributions and positive/negative rates across restaurants, statistical hypothesis testing, restaurant similarity analysis, and business insights derived from the results.
+The hybrid ABSA pipeline extracted over 200 unique aspect expressions from customer reviews. Since these expressions often describe similar business concepts (e.g., *waiter*, *server*, *staff member*), an LLM was used to group them into 16 standardized business categories for downstream analysis.
 
-## Dataset
+Examples include:
 
-Customer reviews from four French restaurants, ~200 randomly sampled reviews per restaurant. Reviews were processed through a hybrid ABSA pipeline (BERT classifier + LLM fallback for low-confidence cases) followed by LLM-assisted aspect categorization.
+- Food Quality
+- Service
+- Staff Behavior
+- Waiting Time
+- Atmosphere
+- Price Value
+- Reservation
+- Drinks
+- Desserts
+- Cleanliness
 
-## Limitations
+---
 
-- Sample size (~200 reviews/restaurant) limits statistical power for some per-category comparisons, particularly where a category has few mentions at a given restaurant.
+## 01 — Exploratory Data Analysis
 
-## Technologies
+Explores the dataset before hypothesis testing.
 
-Python · Pandas · NumPy · Matplotlib · Seaborn · SciPy · Statsmodels · OpenAI API
+The notebook includes:
 
-## Related Work
+- Review statistics
+- Aspect frequency
+- Sentiment distribution
+- Category popularity
+- Positive rate by category
+- Restaurant profiles
 
-Built on the [Hybrid GPT + LLM ABSA Pipeline](https://github.com/azizjon0/Hybrid-ABSA-System) used to generate the underlying aspect-sentiment predictions for this analysis.
+---
 
-## Research Goal
+## 02 — Cross-Restaurant Statistical Analysis
 
-Determine whether different restaurants exhibit similar customer feedback patterns and identify which problems are common across businesses versus restaurant-specific.
+The primary research notebook.
 
-## Author
+Analyses include:
 
-Azizjon Achilov
+- Restaurant comparison
+- Statistical hypothesis testing
+- Category distribution analysis
+- Sentiment comparison
+- Restaurant similarity analysis
+- Business recommendations
+
+---
+
+# Dataset
+
+The dataset was created from the **Yelp Open Dataset**.
+
+To reduce selection bias:
+
+- Four French restaurants were randomly selected from 121 available French restaurants.
+- 200 customer reviews were randomly sampled from each restaurant.
+- The final dataset contains approximately **800 reviews**.
+
+Reviews were processed using a hybrid ABSA pipeline combining:
+
+- SetFit ABSA for high-confidence predictions
+- LLM reasoning for low-confidence cases
+
+The extracted aspects were subsequently grouped into standardized business categories using an LLM.
+
+---
+
+# Statistical Methods
+
+The project applies statistical methods to compare customer feedback patterns across restaurants, including:
+
+- Chi-square Test of Independence
+- Kruskal-Wallis Test
+- Mann-Whitney U Test (where applicable)
+- Jensen-Shannon Distance
+- Mean Absolute Error (restaurant profile similarity)
+
+---
+
+# Limitations
+
+- Only four restaurants were analyzed.
+- Approximately 200 reviews were sampled per restaurant.
+- Results should **not** be interpreted as representative of all French restaurants.
+- Categories with few observations have limited statistical power.
+
+---
+
+# Technologies
+
+- Python
+- Pandas
+- NumPy
+- SciPy
+- Statsmodels
+- Matplotlib
+- Seaborn
+- OpenAI API
+
+---
+
+# Related Project
+
+This analysis is built upon the Hybrid ABSA pipeline used to generate the aspect-level annotations:
+
+**Hybrid ABSA System**
+https://github.com/azizjon0/Hybrid-ABSA-System
+
+---
+
+# Research Objective
+
+The objective of this project is to determine whether customer complaint patterns are shared across restaurants or whether each restaurant develops a unique profile of customer experience.
+
+The findings can help restaurant owners distinguish between:
+
+- operational issues common across businesses,
+- and problems requiring restaurant-specific interventions.
+
+---
+
+# Author
+
+**Azizjon Achilov**
+
+Artificial Intelligence Student • Machine Learning • NLP • Statistical Analysis
