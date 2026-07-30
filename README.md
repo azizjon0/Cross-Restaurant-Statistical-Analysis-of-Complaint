@@ -12,7 +12,7 @@ A statistical study of customer feedback across four French restaurants using As
 - Random sample of **800 customer reviews** (200 per restaurant)
 - **4 French restaurants** randomly selected from the Yelp Open Dataset
 - **15,000+ aspect-level opinions** extracted using a hybrid ABSA pipeline
-- **200+ raw aspect terms** grouped into **16 standardized business categories**
+- **2000+ raw aspect terms** grouped into **16 standardized business categories**
 - Statistical comparison of complaint and satisfaction patterns across restaurants
 
 ---
