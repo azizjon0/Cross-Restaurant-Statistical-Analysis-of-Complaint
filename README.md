@@ -35,23 +35,6 @@ A statistical study of customer feedback across four French restaurants using As
 | Meauxbar | 3.08 |
 | Piquant | 4.05 |
 
-- **Business implication**
-  - The results suggest that restaurant groups should address universal operational issues (such as recurring food-quality complaints) through chain-wide improvements, while restaurant-specific issues should be managed locally to preserve each location's strengths and resolve its unique weaknesses.
-
-- **Statistical evidence**
-  - Chi-square Test
-  - Kruskal-Wallis Test
-  - Effect sizes where appropriate
-
-- **Business implication**
-  - Chain-wide operational improvements should focus on universal issues, while restaurant-specific categories require location-level interventions.
-
-![Category comparison](assets/imagine2.png)
-
-*Example visualization comparing positive and negative sentiments rate across restaurants.*
-
----
-
 # Research Pipeline
 
 The complete analytical workflow consists of five stages:
